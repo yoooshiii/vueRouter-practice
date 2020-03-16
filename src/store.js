@@ -5,11 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state:{
-    count:1
+    count:1,
+    mes:""
   },
   getters:{
     double: state =>state.count*2,
-    triple: state =>state.count*3
+    triple: state =>state.count*3,
+    mes: state => state.mes
   },
   mutations:{
     increment(state,number){
@@ -17,23 +19,36 @@ export default new Vuex.Store({
     },
     decrement(state,number){
       state.count -= number
+    },
+    updateMes(state,value){
+      state.mes = value
     }
+    // 変化を与えるパーツたちの集合
+    // 自作ライブラリ的な
+    // ここからそれぞれに使用するものを指定する
   },
   actions:{
+    Increment({commit},number){
+      commit("increment",number);
+    },
+    Decrement({commit},number){
+      commit("decrement",number);
+    },
+    UpdateMes({commit},value){
+      commit('updateMes',value)
+    }
+    // .
+    // .
+    // .
+    // .
+    // 以下と同じ挙動をする
     // increment(contex,number){
     //   contex.commit("increment",number);
     //   // contex.getters
     //   // contex.dispath
     // },
-    increment({commit},number){
-      commit("increment",number);
-    },
-    decrement({commit},number){
-      commit("decrement",number);
-    }
-    // .
-    // .
-    // .
-    // .
+    // それぞれの関数で使用する
+    //
+    //
   }
 });

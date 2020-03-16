@@ -1,7 +1,9 @@
 <template>
   <div>
-    <button @click=increment(2) name="button">+1</button>
-    <button @click=decrement(2) name="button">-1</button>
+    <button @click=Increment(2) name="button">+1</button>
+    <button @click=Decrement(2) name="button">-1</button>
+    <input type="text" v-model='messeage'>
+    <p>{{ messeage }}</p>
   </div>
 </template>
 
@@ -10,21 +12,30 @@
 import {mapActions} from "vuex";
 
 export default {
-  methods:{
-    ...mapActions(["increment","decrement"])
-    // increment(){
+  computed:{
+    ...mapActions(["Increment"]),
+    messeage:{
+      get(){
+        return this.$store.getters.mes;
+      },
+      set(value){
+        this.$store.dispatch('UpdateMes',value);
+      }
+    }
+    // ,"Decrement"
+    // Increment(){
     //   this.$store.dispath('increment',2);
     // },
-    // decrement(){
+    // Decrement(){
     //   this.$store.dispath('decrement',2);
     // }
 
-    // ...mapMutations(["increment","decrement"])
+    // ...mapMutations(["Increment","Decrement"])
 
-    // increment(){
+    // Increment(){
     //   this.$store.commit("increment",1);
     // },
-    // decrement(){
+    // Decrement(){
     //   this.$store.commit("decrement",1);
     // }
   }
