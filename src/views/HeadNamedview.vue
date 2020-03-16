@@ -13,7 +13,7 @@ import {mapActions} from "vuex";
 
 export default {
   computed:{
-    ...mapActions(["Increment"]),
+    ...mapActions(["Increment","Decrement"]),
     messeage:{
       get(){
         return this.$store.getters.mes;
