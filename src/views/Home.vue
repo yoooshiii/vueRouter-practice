@@ -17,7 +17,7 @@ export default {
       return this.$store.getters.triple;
     },
     count(){
-      return this.$store.state.count;
+      return this.$store.getters.count;
     }
   }
 };

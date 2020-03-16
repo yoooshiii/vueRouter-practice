@@ -1,8 +1,9 @@
 const state = {
-  count:1
+  count:2
 };
 
 const getters = {
+    count:state =>state.count,
     double: state =>state.count*2,
     triple: state =>state.count*3
 };
