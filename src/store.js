@@ -31,5 +31,9 @@ export default new Vuex.Store({
     decrement({commit},number){
       commit("decrement",number);
     }
+    // .
+    // .
+    // .
+    // .
   }
 });
