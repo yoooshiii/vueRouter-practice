@@ -23,8 +23,8 @@ export default new Vuex.Store({
     updateMes(state,value){
       state.mes = value
     }
-    // 変化を与えるパーツたちの集合
-    // 自作ライブラリ的な
+    // 変化を与えるモジュールたちの集合
+    // 自作モジュール的な
     // ここからそれぞれに使用するものを指定する
   },
   actions:{
