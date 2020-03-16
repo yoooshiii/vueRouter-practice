@@ -6,6 +6,7 @@ const getters = {
     count:state =>state.count,
     double: state =>state.count*2,
     triple: state =>state.count*3
+    // 整形
 };
 
 const mutations = {
