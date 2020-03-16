@@ -20,6 +20,11 @@ export default new Vuex.Store({
     }
   },
   actions:{
+    // increment(contex,number){
+    //   contex.commit("increment",number);
+    //   // contex.getters
+    //   // contex.dispath
+    // },
     increment({commit},number){
       commit("increment",number);
     },

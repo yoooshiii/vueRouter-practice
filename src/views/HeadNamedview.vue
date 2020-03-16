@@ -12,6 +12,13 @@ import {mapActions} from "vuex";
 export default {
   methods:{
     ...mapActions(["increment","decrement"])
+    // increment(){
+    //   this.$store.dispath('increment',2);
+    // },
+    // decrement(){
+    //   this.$store.dispath('decrement',2);
+    // }
+
     // ...mapMutations(["increment","decrement"])
 
     // increment(){
