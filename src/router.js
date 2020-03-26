@@ -12,6 +12,7 @@ const Users = ()=> import(/*webpackChunkName:"users"*/ "./views/Users.vue");
 const UsersPosts = ()=> import(/*webpackChunkName:"usersposts"*/ "./views/UsersPosts.vue");
 const UsersProfile = ()=> import(/*webpackChunkName:"usersprofile"*/ "./views/UsersProfile.vue");
 const HeadNamedview = ()=> import(/*webpackChunkName:"named"*/ "./views/HeadNamedview.vue");
+const Skill = ()=> import(/*webpackChunkName:"skill1"*/"./views/Skill.vue");
 
 Vue.use(Router);
 
@@ -26,6 +27,12 @@ export default new Router({
       },
       beforeEnter(to,from,next){
         next(true);
+      }
+    },
+    {
+      path:'/skill',
+      components:{
+        default:Skill,
       }
     },
     {
