@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>{{skills}}</p>
+    <p>{{ysk}}</p>
   </div>
 </template>
 
@@ -8,7 +9,8 @@
 export default{
   data(){
     return{
-        skills:'Vue.js'
+        skills:'Vue.js',
+        ysk:'CopyWrite YOSHIKI.K'
     };
   }
 }
