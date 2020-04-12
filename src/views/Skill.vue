@@ -12,7 +12,7 @@
 export default{
   data(){
     return{
-        message:'ここにテキストを入れて下さい',
+        message:'このサイトはVueのプラクティスとFirebaseの実験を合わせたものです。',
         skills:'Vue.js',
         ysk:'CopyWrite YOSHIKI.K',
         num:0
